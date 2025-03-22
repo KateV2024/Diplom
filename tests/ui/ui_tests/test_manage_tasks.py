@@ -148,8 +148,8 @@ def test_user_updates_task(driver):
         assert tasks.check_done_task()
 
 def test_user_deletes_task(driver):
-    username = "kate11"
-    password = "kate11"
+    username = "kate13"
+    password = "kate13"
     title = "ola4"
     description = "desc4"
 

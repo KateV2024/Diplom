@@ -8,7 +8,7 @@ from tests.ui.pages.tasks_page import TasksPage
 @pytest.mark.parametrize(
     "username, password",
     [
-        ('423025', '411111'),
+        ('4333323', '411111'),
         ('', 'password'),
         ('979597', ''),
         ('', ''),
@@ -62,7 +62,7 @@ def test_register_user(driver, username, password):
 @pytest.mark.parametrize(
     "username, password",
     [
-        ('423025', '411111'),
+        ('4333323', '411111'),
         ('', 'password'),
         ('username', ''),
         ('', '')
@@ -105,8 +105,8 @@ def test_login_user(driver, username, password):
 @allure.severity(allure.severity_level.CRITICAL)
 
 def test_user_on_tasks(driver):
-    username = "kate11"
-    password = "kate11"
+    username = "kate15"
+    password = "kate15"
 
     with allure.step("Navigate to the login page and authenticate"):
         user_on_tasks = LoginPage(driver)
@@ -114,18 +114,18 @@ def test_user_on_tasks(driver):
         user_on_tasks.authenticated_user(username, password)
 
     with allure.step("Verify successful login"):
-        tasks = TasksPage(driver)
-        tasks.get_success_message()
-        assert "Вы успешно вошли в систему" in tasks.get_success_message(), "User is not authorized"
+        tasks1 = TasksPage(driver)
+        tasks1.get_success_message()
+        assert "Вы успешно вошли в систему" in tasks1.get_success_message(), "User is not authorized"
 
     with allure.step("Verify username in logout section"):
-        tasks.find_username_in_logout()
-        assert username in tasks.find_username_in_logout(), "Another user is authorized"
+        tasks1.find_username_in_logout()
+        assert username in tasks1.find_username_in_logout(), "Another user is authorized"
 
     with allure.step("Logout and verify logout message"):
-        tasks.log_out()
-        tasks.find_info_message()
-        assert "Вы вышли из системы" in tasks.find_info_message(), "User didn't log out"
+        tasks1.log_out()
+        tasks1.find_info_message()
+        assert "Вы вышли из системы" in tasks1.find_info_message(), "User didn't log out"
         assert "login" in driver.current_url, "User is not on the login page"
         allure.attach(driver.get_screenshot_as_png(), name="Logout_Result", attachment_type=allure.attachment_type.PNG)
         print("Tasks and logout test is completed")

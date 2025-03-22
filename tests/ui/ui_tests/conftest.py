@@ -1,12 +1,10 @@
 import pytest
 from selenium import webdriver
-# from webdriver_manager.chrome import ChromeDriverManager
 from selenium.webdriver.chrome.service import Service
 from selenium.webdriver.chrome.options import Options
-# Comment line 7 for docker
-from webdriver_manager.chrome import ChromeDriverManager
+from webdriver_manager.chrome import ChromeDriverManager # Comment for docker
 
-
+# Fixture for local testing
 @pytest.fixture
 def driver():
     options = Options()
@@ -16,6 +14,7 @@ def driver():
     yield config_driver
     config_driver.quit()
 
+# Fixture for docker
 # @pytest.fixture
 # def driver():
 #     options = Options()

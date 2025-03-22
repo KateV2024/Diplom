@@ -6,7 +6,7 @@ from tests.ui.pages.base_page import BasePage
 
 class TasksPage(BasePage):
     SUCCESS_MESSAGE = (By.CLASS_NAME, "alert-success")
-    LOG_OUT_BTN = (By.CSS_SELECTOR, "a.nav-link[data-testid='nav-logout']")
+    LOG_OUT_BTN = (By.CSS_SELECTOR, "a[data-testid='nav-logout']")
     INFO_MSG = (By.CSS_SELECTOR,"div.alert.alert-info.alert-dismissible.fade.show[data-testid='flash-message-info']")
     CREATE_TASK_BTN =(By.CLASS_NAME, "btn.btn-primary")
     INPUT_NEW_TASK_TITLE = (By.ID, "title")
