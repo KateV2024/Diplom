@@ -1,0 +1,4 @@
+Response Status Code: 200
+Response JSON: {'message': 'Вы успешно вошли в систему', 'user_id': 57, 'username': 'Kate10'}
+Response Status Code: 200
+Response JSON: [{'completed': True, 'created_at': '2025-03-20T20:03:05.754864', 'description': '', 'id': 93, 'title': '', 'user_id': 57}]
