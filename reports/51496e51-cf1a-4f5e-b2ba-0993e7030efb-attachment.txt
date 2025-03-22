@@ -1,2 +1,0 @@
-Response Status Code: 200
-Response JSON: {'message': 'Вы успешно вошли в систему', 'user_id': 57, 'username': 'Kate10'}

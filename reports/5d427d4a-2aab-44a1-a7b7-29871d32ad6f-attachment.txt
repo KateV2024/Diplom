@@ -1,2 +1,0 @@
-Response Status Code: 201
-Response JSON: {'message': 'Регистрация успешна'}

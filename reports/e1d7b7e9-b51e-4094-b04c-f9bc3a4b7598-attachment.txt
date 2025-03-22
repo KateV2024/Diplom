@@ -1,2 +1,0 @@
-Response Status Code: 400
-Response JSON: {'error': 'Пользователь с таким именем уже существует'}
