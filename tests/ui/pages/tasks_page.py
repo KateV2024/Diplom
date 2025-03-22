@@ -28,6 +28,9 @@ class TasksPage(BasePage):
         return self.find_element(self.SUCCESS_MESSAGE).text
 
     def find_username_in_logout(self):
+        WebDriverWait(self.driver, 10).until(
+            EC.element_to_be_clickable(self.LOG_OUT_BTN)
+        )
         return self.find_element(self.LOG_OUT_BTN).text
 
     def log_out(self):

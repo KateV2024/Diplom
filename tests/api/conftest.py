@@ -12,10 +12,10 @@ DB_PARAMS = {
     'user': os.environ.get('POSTGRES_USER', 'postgres'),
     'password': os.environ.get('POSTGRES_PASSWORD', 'postgres'),
     #local
-    'host': os.environ.get('POSTGRES_HOST', 'localhost'),
+    # 'host': os.environ.get('POSTGRES_HOST', 'localhost'),
     #Docker
-    # 'host': os.environ.get('POSTGRES_HOST', 'db'),
-    # 'port': os.environ.get('POSTGRES_PORT', '5432')
+    'host': os.environ.get('POSTGRES_HOST', 'db'),
+    'port': os.environ.get('POSTGRES_PORT', '5432')
 }
 
 @pytest.fixture(scope="function")
